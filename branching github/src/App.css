@@ -3,37 +3,39 @@ body {
   background-color: #f4f4f4;
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 20px;
   margin: 0;
 }
 
-.container {
+.container, .todo-container, .quiz-container {
   background: white;
-  padding: 20px;
+  padding: 15px;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-  width: 350px;
-  margin-bottom: 20px;
+  width: 300px;
+  margin: 10px;
 }
 
 h1 {
   color: #333;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  font-size: 20px;
 }
 
 input {
-  padding: 8px;
+  padding: 6px;
   width: 100%;
   border: 1px solid #ddd;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .age-result {
-  margin-top: 20px;
-  font-size: 18px;
+  margin-top: 15px;
+  font-size: 16px;
   color: #555;
 }
 
@@ -45,34 +47,24 @@ input {
 .logo-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .logo {
-  height: 40px;
+  height: 30px;
   margin: 0 10px;
 }
 
-.todo-container {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  width: 350px;
-  margin-bottom: 20px;
-}
-
 .todo-container input {
-  padding: 10px;
-  font-size: 16px;
-  margin-bottom: 10px;
-  width: calc(100% - 22px);
+  padding: 8px;
+  font-size: 14px;
+  margin-bottom: 8px;
+  width: calc(100% - 16px);
 }
 
 .todo-container button {
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 8px 16px;
+  font-size: 14px;
   margin: 5px;
 }
 
@@ -85,7 +77,7 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 8px;
   border: 1px solid #ccc;
   margin: 5px 0;
   width: 100%;
@@ -93,24 +85,24 @@ li {
 
 .quiz-container {
   background: rgb(19, 19, 19);
-  padding: 20px;
+  padding: 15px;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-  width: 350px;
-  margin-bottom: 20px;
+  width: 300px;
+  margin: 10px;
 }
 
 .question-section {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .question-count {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .question-text {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .answer-section {
@@ -119,17 +111,17 @@ li {
 }
 
 .answer-section button {
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 8px 16px;
+  font-size: 14px;
   margin: 5px;
 }
 
 .score-section {
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-size: 20px;
+  margin-bottom: 15px;
 }
 
 .score-section button {
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 8px 16px;
+  font-size: 14px;
 }
