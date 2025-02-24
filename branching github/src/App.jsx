@@ -1,5 +1,6 @@
-
 import React, { useState, useEffect } from "react";
+import reactLogo from './assets/react.svg';
+import viteLogo from '/vite.svg';
 import "./App.css";
 
 const AgeCalculator = () => {
@@ -33,6 +34,11 @@ const AgeCalculator = () => {
     setAge({ totalYears, totalMonths, totalDays, totalHours, totalMinutes, totalSeconds });
   };
 
+  const handleResetClick = () => {
+    setBirthDate("");
+    setAge(null);
+  };
+
   return (
     <div className="container">
       <h1>Age Calculator</h1>
@@ -52,38 +58,30 @@ const AgeCalculator = () => {
           <p><span>{age.totalSeconds}</span> Seconds</p>
         </div>
       )}
+      <button onClick={handleResetClick}>Reset</button>
     </div>
   );
 };
 
-const App = () => {
-  return <AgeCalculator />;
-};
+const Quiz = () => {
+  const questions = [
+    {
+      question: "What is the capital of France?",
+      options: ["Berlin", "Madrid", "Paris", "Lisbon"],
+      answer: "Paris"
+    },
+    {
+      question: "Who wrote 'To Kill a Mockingbird'?",
+      options: ["Harper Lee", "Mark Twain", "Ernest Hemingway", "F. Scott Fitzgerald"],
+      answer: "Harper Lee"
+    },
+    {
+      question: "What is the smallest planet in our solar system?",
+      options: ["Earth", "Mars", "Mercury", "Venus"],
+      answer: "Mercury"
+    }
+  ];
 
-export default App;
-import { useState } from 'react';
-
-import './App.css';
-
-const questions = [
-  {
-    question: "What is the capital of France?",
-    options: ["Berlin", "Madrid", "Paris", "Lisbon"],
-    answer: "Paris"
-  },
-  {
-    question: "Who wrote 'To Kill a Mockingbird'?",
-    options: ["Harper Lee", "Mark Twain", "Ernest Hemingway", "F. Scott Fitzgerald"],
-    answer: "Harper Lee"
-  },
-  {
-    question: "What is the smallest planet in our solar system?",
-    options: ["Earth", "Mars", "Mercury", "Venus"],
-    answer: "Mercury"
-  }
-];
-
-function App() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [showScore, setShowScore] = useState(false);
@@ -133,23 +131,9 @@ function App() {
       )}
     </div>
   );
-}
+};
 
-export default App;
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
-import './App.css';
-
-function App() {
-
-  
-
-  return (
-    <>
-     
-      <h1>Sudipta Baidya</h1>
-      <h1>gtfo</h1>
-
+const TodoList = () => {
   const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState('');
 
@@ -188,10 +172,19 @@ function App() {
           ))}
         </ul>
       </div>
-
     </>
   );
-}
+};
+
+const App = () => {
+  return (
+    <div>
+      <AgeCalculator />
+      <Quiz />
+      <TodoList />
+    </div>
+  );
+};
 
 export default App;
 
